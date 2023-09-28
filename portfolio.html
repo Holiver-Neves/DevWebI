@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <header>
-        <!-- Adicione a sua foto aqui -->
+    <header back>
         <img src="./img/perfil.png" alt="Sua Foto" class="perfil-foto">
         <h1>Holiver Neves Corrêa</h1>
         <nav>
@@ -37,22 +36,30 @@
 
     <section id="projetos">
         <h2>Projetos</h2>
-        <div class="projeto">
+        <div class="projeto projeto-expandir">
             <img src="img/arcellor.png" alt="Projeto 1">
             <h3>Transformação Digital - Arcelor Mittal</h3>
-            <p>No projeto para a empresa Arcelor Mittal, nós fizemos a migração de diversos formulários manuscritos para Power Apps Canvas.
-                De modo a deixar muito mais eficiente todo o processo de cadastro de itens, consulta, solicitações e aprovações.</p>
+            <p>No projeto para a empresa Arcelor Mittal, nós fizemos a migração de diversos formulários manuscritos para
+                Power Apps Canvas.
+                De modo a deixar muito mais eficiente todo o processo de cadastro de itens, consulta, solicitações e
+                aprovações.</p>
         </div>
 
-        <div class="projeto">
+        <div class="projeto projeto-expandir">
             <img src="img/uhcl.png" alt="Projeto 2">
             <h3>Pagina Web com Power Pages - United Healthcare License</h3>
-            <p>Nesse projeto para a empresa norte americana United Healthcare License, nosso desafio era criar uma pagina Web para cadastro e gerenciamento de médicos dos Estados Unidos e suas devidas licensas, utilizando o Microsoft Power Pages, dessa forma conseguindo integrar com diversos recursos do Microsoft Power Platform.</p>
+            <p>Nesse projeto para a empresa norte americana United Healthcare License, nosso desafio era criar uma
+                pagina Web para cadastro e gerenciamento de médicos dos Estados Unidos e suas devidas licensas,
+                utilizando o Microsoft Power Pages, dessa forma conseguindo integrar com diversos recursos do Microsoft
+                Power Platform.</p>
         </div>
-        <div class="projeto">
+        <div class="projeto projeto-expandir">
             <img src="img/Logo_Prosperi.png" alt="Projeto 2">
             <h3>Portal do Cliente</h3>
-            <p>O Portal do Cliente, foi uma solução pensada para resolver um problema interno da empresa, onde tanto os Gerentes de Projeto quanto os Clientes, não tinha um local centralizado para visualização das horas contratadas e utilizadas em cada projeto, dessa forma foi criado um portal web, em .Net Core, Typescript e Angular para solucionar esse problema.</p>
+            <p>O Portal do Cliente, foi uma solução pensada para resolver um problema interno da empresa, onde tanto os
+                Gerentes de Projeto quanto os Clientes, não tinha um local centralizado para visualização das horas
+                contratadas e utilizadas em cada projeto, dessa forma foi criado um portal web, em .Net Core, Typescript
+                e Angular para solucionar esse problema.</p>
         </div>
     </section>
 
@@ -63,7 +70,6 @@
             <li>Ajustes em dashboards Power BI.</li>
             <li>Melhorias em aplicativos Power Apps.</li>
             <li>Atualizações em fluxos Power Automate.</li>
-            <!-- Adicione mais empresas conforme necessário -->
         </ul>
     </section>
 
@@ -72,22 +78,44 @@
         <ul>
             <li>Cursando Superior em Sistemas de Informação.</li>
             <li>Certificação <b>PL-900</b> - Microsoft Power Platform.</li>
-            
-            
-            <!-- Adicione mais empresas conforme necessário -->
+            <img width="100px" src="img/pl900_img02.png" alt="PL-900">
+
         </ul>
     </section>
 
     <section id="contato">
         <h2>Contato</h2>
         <p>Entre em contato comigo em:</p>
-        <p>Email: seuemail@example.com</p>
-        <p>Telefone: (123) 456-7890</p>
+        <p>Email: holiver022@gmail.com</p>
+        <p>Telefone: (27) 9999-9999</p>
+        
+            <p> <a href="https://www.linkedin.com/in/holiver-neves/">LinkedIn</a></p>
+            <p><a href="https://github.com/Holiver-Neves/">GitHub</a></p>
+        
+
     </section>
 
     <footer>
-        <p>&copy; 2023 Seu Nome</p>
+        <p>&copy; 2023 Holiver Neves Corrêa</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Adiciona animação de rolagem suave para os links do menu
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
